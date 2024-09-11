@@ -7,26 +7,8 @@ export async function onRequest({ request }) {
   // const resText = await res.text()
   // return resText
 
-  return fetch('https://catbox.moe/user/api.php', {
-    headers: {
-      ...request.headers,
-      accept: 'application/json',
-      'accept-language': 'zh-CN,zh;q=0.9',
-      'cache-control': 'no-cache',
-      pragma: 'no-cache',
-      priority: 'u=1, i',
-      'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
-      'sec-ch-ua-mobile': '?0',
-      'sec-ch-ua-platform': '"Windows"',
-      'sec-fetch-dest': 'empty',
-      'sec-fetch-mode': 'cors',
-      'sec-fetch-site': 'same-origin',
-      'x-requested-with': 'XMLHttpRequest',
-      cookie: 'PHPSESSID=5hjbtnp53scmc0hkg8uml38kcp',
-      origin: 'https://catbox.moe',
-      Referer: 'https://catbox.moe/',
-      'Referrer-Policy': 'same-origin'
-    },
+  return fetch('http://store.liebao.cn/game/screenshot/postImage.php', {
+    headers: request.headers,
     body: request.body,
     method: request.method
   })
